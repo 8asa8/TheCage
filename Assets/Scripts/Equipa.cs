@@ -9,8 +9,7 @@ public class Equipa : ScriptableObject
 {
 
     public string nome;
-    public Image logo;
-
+    public Sprite logo;
     public List<Jogador> Jogadores;
 
 }
