@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Roberto Carlos
   m_EditorClassIdentifier: 
   Nome: Roberto Carlos
-  Def: 0
-  Med: 0
-  Att: 0
-  TSI: 0
+  Def: 4
+  Mid: 4
+  Att: 2
+  TSI: 10
   DifPvp: 0
   Especializacao: 0
   Image: {fileID: 21300000, guid: da8e9d9f1314e0940b5062e29a3c0c4d, type: 3}

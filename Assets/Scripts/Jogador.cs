@@ -8,7 +8,7 @@ public class Jogador : ScriptableObject
 {
     public string Nome;
     public int Def;
-    public int Med;
+    public int Mid;
     public int Att;
     public int TSI;
     public float DifPvp;

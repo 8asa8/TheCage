@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Figo
   m_EditorClassIdentifier: 
   Nome: L. Figo
-  Def: 0
-  Med: 0
-  Att: 0
-  TSI: 0
+  Def: 2
+  Mid: 5
+  Att: 3
+  TSI: 10
   DifPvp: 0
   Especializacao: 0
   Image: {fileID: 21300000, guid: 90a0487a1763ec9469544bae67b84e41, type: 3}
