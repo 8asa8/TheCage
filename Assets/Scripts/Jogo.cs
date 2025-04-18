@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JogadorScript : MonoBehaviour
+public class Jogo : MonoBehaviour
 {
-    public string Nome;
-    public int Def;
-    public int Med;
-    public int Att;
-    public int TSI;
-    public float DifPvp;
-    public float Especializacao;
+    [SerializeField] Equipa equipa;
     // Start is called before the first frame update
     void Start()
     {
-
+        foreach (Jogador jogador in equipa.Jogadores)
+        {
+            Debug.Log($"Nome: {jogador.Nome}");
+        }
     }
 
     // Update is called once per frame
