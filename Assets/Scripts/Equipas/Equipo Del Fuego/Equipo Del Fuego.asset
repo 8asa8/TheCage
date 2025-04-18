@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
+  m_Name: Equipo Del Fuego
+  m_EditorClassIdentifier: 
+  nome: 
+  logo: {fileID: 0}
+  Jogadores:
+  - {fileID: 11400000, guid: 77369cb2850f5ed41ab0fcbd130f75bd, type: 2}
+  - {fileID: 11400000, guid: b90b3f228935ea4408366ee9654e524a, type: 2}
+  - {fileID: 11400000, guid: ae5b7c877f6ca834cb5f7b9e27d6713d, type: 2}

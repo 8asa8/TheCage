@@ -1,5 +1,7 @@
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static GameState;
 public class MainMenuController : MonoBehaviour
 {
@@ -41,7 +43,7 @@ public class MainMenuController : MonoBehaviour
     {
         if (estadoSelecao > 0)
         {
-            // GameStart - todas as equipas foram selecionadas
+            SceneManager.LoadScene(1); //Entra no Jogo
         }
         estadoSelecao++;
         PlayerSelecting.text = "Player 2";

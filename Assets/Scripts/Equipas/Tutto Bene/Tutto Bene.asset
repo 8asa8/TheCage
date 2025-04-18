@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
+  m_Name: Tutto Bene
+  m_EditorClassIdentifier: 
+  nome: 
+  logo: {fileID: 0}
+  Jogadores:
+  - {fileID: 11400000, guid: e4f4cf92b18f4cc48824214b82505463, type: 2}
+  - {fileID: 11400000, guid: 69b59f079803bf14b828c633c6ef8005, type: 2}
+  - {fileID: 11400000, guid: f07c35f55d6f92b49ad08362f4728781, type: 2}

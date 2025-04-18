@@ -1156,7 +1156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 129, y: -203}
+  m_AnchoredPosition: {x: 129, y: -168.2}
   m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288960237
@@ -1329,7 +1329,7 @@ MonoBehaviour:
         m_MethodName: TeamSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 11400000, guid: f1f29cdcbc380e842b885ff496d044c8, type: 2}
           m_ObjectArgumentAssemblyTypeName: Equipa, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2224,7 +2224,7 @@ MonoBehaviour:
         m_MethodName: TeamSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 11400000, guid: 7f2cadf2095fede45a68f6dcff6e811e, type: 2}
           m_ObjectArgumentAssemblyTypeName: Equipa, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2439,7 +2439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.2, y: -202.3}
+  m_AnchoredPosition: {x: 127.000046, y: -345.40002}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616026970
@@ -2552,7 +2552,7 @@ GameObject:
   - component: {fileID: 632888273}
   - component: {fileID: 632888272}
   m_Layer: 5
-  m_Name: Toros Locos (1)
+  m_Name: Tutto Bene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2627,7 +2627,7 @@ MonoBehaviour:
         m_MethodName: TeamSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 11400000, guid: ad54ef73c006720409e8defb6f246b38, type: 2}
           m_ObjectArgumentAssemblyTypeName: Equipa, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2783,7 +2783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.3, y: -202.1}
+  m_AnchoredPosition: {x: 127.10005, y: -345.40002}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665753674
@@ -3614,7 +3614,7 @@ MonoBehaviour:
         m_MethodName: TeamSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 11400000, guid: a81f83f2962353a499287d34b226b46b, type: 2}
           m_ObjectArgumentAssemblyTypeName: Equipa, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3694,7 +3694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.2, y: -96.4}
+  m_AnchoredPosition: {x: 47.4, y: -345.4}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107726909
@@ -4479,7 +4479,7 @@ GameObject:
   - component: {fileID: 1261373984}
   - component: {fileID: 1261373983}
   m_Layer: 5
-  m_Name: Funk Seul Brothers (1)
+  m_Name: Equipo Del Fuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4554,7 +4554,7 @@ MonoBehaviour:
         m_MethodName: TeamSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 11400000, guid: b47473513f1f29a469f3e6ef8506db53, type: 2}
           m_ObjectArgumentAssemblyTypeName: Equipa, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5122,7 +5122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.2, y: -310.7}
+  m_AnchoredPosition: {x: 205.80005, y: -345.40002}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618729883
@@ -5341,7 +5341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.3, y: -309.6}
+  m_AnchoredPosition: {x: 205.9001, y: -345.40002}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678221044
@@ -6403,7 +6403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.3, y: -96.9}
+  m_AnchoredPosition: {x: 47.500076, y: -345.40002}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082421044

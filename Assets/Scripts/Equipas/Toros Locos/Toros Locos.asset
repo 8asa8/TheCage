@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
+  m_Name: Toros Locos
+  m_EditorClassIdentifier: 
+  nome: 
+  logo: {fileID: 0}
+  Jogadores:
+  - {fileID: 11400000, guid: a483bc60226099b43b3d4a51a61abb8c, type: 2}
+  - {fileID: 11400000, guid: e9737e5056d13fb47a2b4a5956f9cbe4, type: 2}
+  - {fileID: 11400000, guid: 6911bf7fb5d4eec42b01a64bccfa9982, type: 2}
