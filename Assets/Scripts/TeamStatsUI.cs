@@ -29,12 +29,8 @@ public class TeamStatsUI : MonoBehaviour
         }
 
         teamLogo.sprite = equipa.logo;
-        //overallDef = equipa.CaculateOverallDef();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        overallDef.text = equipa.CaculateOverallDef().ToString();
+        overallMid.text = equipa.CaculateOverallMid().ToString();
+        overallAtt.text = equipa.CaculateOverallAtt().ToString();
     }
 }

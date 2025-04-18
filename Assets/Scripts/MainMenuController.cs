@@ -1,17 +1,19 @@
+using TMPro;
 using UnityEngine;
 using static GameState;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] Canvas mainMenuCanvas;
     [SerializeField] Canvas teamSelectionCanvas;
-
     [SerializeField] TeamStatsUI teamStats;
+    [SerializeField] TextMeshProUGUI PlayerSelecting;
     private int estadoSelecao = 0;
 
     public void Start()
     {
         mainMenuCanvas.gameObject.SetActive(true);
         teamSelectionCanvas.gameObject.SetActive(false);
+        PlayerSelecting.text = "Player 1";
     }
     public void OpenSelectTeamPopup()
     {
@@ -42,6 +44,7 @@ public class MainMenuController : MonoBehaviour
             // GameStart - todas as equipas foram selecionadas
         }
         estadoSelecao++;
+        PlayerSelecting.text = "Player 2";
     }
 
 
