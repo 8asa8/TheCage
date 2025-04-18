@@ -2044,7 +2044,7 @@ MonoBehaviour:
   mainMenuCanvas: {fileID: 868407425}
   teamSelectionCanvas: {fileID: 1849480550}
   teamStats: {fileID: 1160289195}
-  PlayerSelecting: {fileID: 0}
+  PlayerSelecting: {fileID: 908412886}
 --- !u!4 &507074596
 Transform:
   m_ObjectHideFlags: 0
