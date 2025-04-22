@@ -14,6 +14,7 @@ public class Jogador : ScriptableObject
     public float DifPvp;
     public float Especializacao;
     public Sprite Image;
+    //public int pos;
     // Start is called before the first frame update
 
 
