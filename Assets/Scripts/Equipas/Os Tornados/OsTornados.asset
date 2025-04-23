@@ -15,6 +15,6 @@ MonoBehaviour:
   nome: Os Tornados
   logo: {fileID: 0}
   Jogadores:
+  - {fileID: 11400000, guid: 9cc247a28373d74458243aa7c316ec8a, type: 2}
   - {fileID: 11400000, guid: 832804e1c2a26bb468c13a16afb89e27, type: 2}
   - {fileID: 11400000, guid: dd319ab6edbd1d74d81ee3907a4d31f7, type: 2}
-  - {fileID: 11400000, guid: 9cc247a28373d74458243aa7c316ec8a, type: 2}

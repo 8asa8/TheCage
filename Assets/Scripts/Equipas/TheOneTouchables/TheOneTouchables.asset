@@ -16,5 +16,5 @@ MonoBehaviour:
   logo: {fileID: 21300000, guid: 145dfe402c45b79459e177bf32fdbef6, type: 3}
   Jogadores:
   - {fileID: 11400000, guid: 61535e199bf153e48814517f95e5130d, type: 2}
-  - {fileID: 11400000, guid: 17aac8bcaddca3449acaaacab83323c6, type: 2}
   - {fileID: 11400000, guid: 535d1f9880d156f488349ab14544421f, type: 2}
+  - {fileID: 11400000, guid: 17aac8bcaddca3449acaaacab83323c6, type: 2}

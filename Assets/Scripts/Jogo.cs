@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Jogo : MonoBehaviour
 {
     [SerializeField] Equipa equipa1;
     [SerializeField] Equipa equipa2;
+    public Campo campo;
+    //public float percentagem0;
+    //public TextMeshProUGUI percentagem0Text;
 
-     
-     public Campo campo;
-    // Start is called before the first frame update
+
+
+
+
     void Start()
     {
         //campo = new Campo(); 
@@ -19,27 +24,32 @@ public class Jogo : MonoBehaviour
         foreach (Jogador jogador in equipa1.Jogadores)
         {
             Debug.Log($"Nome: {jogador.Nome}");
-            campo.AddPlayerToZone(i,jogador);
+            campo.AddPlayerToZone(i, jogador);
             i++;
         }
 
-        
+
         Debug.Log(equipa2.nome);
         foreach (Jogador jogador in equipa2.Jogadores)
         {
             Debug.Log($"Nome: {jogador.Nome}");
-            campo.AddPlayerToZone(j,jogador);
+            campo.AddPlayerToZone(j, jogador);
             j--;
 
         }
-
-        //Atribuir posicoes
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        campo.CalculaPercentagem();
     }
+
+    /*void CalculaPercentagem()
+    {
+        //percentagem0.text = campo.relacaoPosicaoJogador[1].Def.ToString();
+        //Mudar isto para o CAMPO
+        percentagem0 = equipa1.CaculateOverallDef() / (equipa1.CaculateOverallDef() + equipa2.CaculateOverallAtt());
+        percentagem0Text.text = percentagem0.ToString();
+    }*/
 }

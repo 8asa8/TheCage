@@ -15,6 +15,6 @@ MonoBehaviour:
   nome: TrippleExpresso
   logo: {fileID: 21300000, guid: 221cdeec04d95304085a762ffaea737f, type: 3}
   Jogadores:
-  - {fileID: 11400000, guid: f363d9b70bbeb6f40ba7608f7b26e973, type: 2}
   - {fileID: 11400000, guid: f880855cf6b41134a95fd017553416f8, type: 2}
   - {fileID: 11400000, guid: d97823fc044333f4e8345ef65aedd28d, type: 2}
+  - {fileID: 11400000, guid: f363d9b70bbeb6f40ba7608f7b26e973, type: 2}
