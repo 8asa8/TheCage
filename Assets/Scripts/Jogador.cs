@@ -7,16 +7,23 @@ using UnityEngine;
 public class Jogador : ScriptableObject
 {
     public string Nome;
-    public int Def;
-    public int Mid;
-    public int Att;
-    public int TSI;
-    public float DifPvp;
-    public float Especializacao;
+    public float Def;
+    public float Mid;
+    public float Att;
+    public float TSI;
+    
     public Sprite Image;
     //public int pos;
     // Start is called before the first frame update
-
+    public float Especializacao(string stat){
+        switch(stat)
+        {
+            case "DEF": return Def / TSI;
+            case "ATT": return Att / TSI;
+            case "MID": return Mid / TSI;
+            default: return 0;
+        }
+    }
 
 }
 

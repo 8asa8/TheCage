@@ -19,7 +19,7 @@ public class Equipa : ScriptableObject
         int def = 0;
         foreach (Jogador jogador in Jogadores)
         {
-            def += jogador.Def;
+            def += (int)jogador.Def;
         }
         return def;
     }
@@ -28,7 +28,7 @@ public class Equipa : ScriptableObject
         int def = 0;
         foreach (Jogador jogador in Jogadores)
         {
-            def += jogador.Mid;
+            def += (int)jogador.Mid;
         }
         return def;
     }
@@ -37,7 +37,7 @@ public class Equipa : ScriptableObject
         int def = 0;
         foreach (Jogador jogador in Jogadores)
         {
-            def += jogador.Att;
+            def += (int)jogador.Att;
         }
         return def;
     }

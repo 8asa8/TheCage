@@ -27,11 +27,13 @@ public class MainMenuController : MonoBehaviour
     {
         if (estadoSelecao == 0)
         {
+            equipa1 = new Equipa();
             equipa1 = equipaSelecionada;
             Debug.Log($"EQUIPA 1 SELECIONADA: {equipa1.nome}");
         }
         else
         {
+            equipa2 = new Equipa();
             equipa2 = equipaSelecionada;
             Debug.Log($"EQUIPA 2 SELECIONADA: {equipa2.nome}");
         }
