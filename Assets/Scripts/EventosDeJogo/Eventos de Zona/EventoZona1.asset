@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   tipo: Zona
-  text: A bola cai no relvado e pedois de uma breve disputa entre as equipas, vai
-    para a Zona {zona}
+  text: A bola cai no relvado. Depois de uma breve disputa entre as equipas, vai
+    para a [zona]

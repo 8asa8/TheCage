@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4608a6ddfec42be4b95a2644f0d93baf, type: 3}
-  m_Name: Evento Equipa5
+  m_Name: Evento Equipa Reage5
   m_EditorClassIdentifier: 
   id: 5
-  tipo: Equipa
-  text: Numa disputa de ombro com ombro, o jogador da Equipa [equipa] ganha o controlo
-    da bola.
+  tipo: EquipaReage
+  text: A Equipa dos [equipa2] parece reagir um segundo mais tarde aos movimentos
+    da bola...

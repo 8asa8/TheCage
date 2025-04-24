@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tipo: Zona
-  text: O jogo comeca fernetico, as duas equipas trocam a bola entre si. No meio
-    do confronto a bola fica na Zona x
+  text: As duas equipas trocam a bola entre si. No meio do confronto a bola fica
+    na Zona do [zona]

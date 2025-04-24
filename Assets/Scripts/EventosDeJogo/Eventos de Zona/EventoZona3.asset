@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 3
   tipo: Zona
   text: Jogo Tranquilo, as Equipas vao trocando a bola entre si ate que num rasgo
-    de genielidade a bola e cortada e vai para a Zona x
+    de genielidade a bola e cortada e vai para a Zona [zona].

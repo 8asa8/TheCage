@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
   m_Name: Equipo Del Fuego
   m_EditorClassIdentifier: 
-  nome: 
+  nome: Equipo Del Fuego
   logo: {fileID: 0}
   Jogadores:
   - {fileID: 11400000, guid: b90b3f228935ea4408366ee9654e524a, type: 2}

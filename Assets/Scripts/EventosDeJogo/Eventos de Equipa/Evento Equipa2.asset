@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tipo: Equipa
-  text: Grande capacidade de reacao da Equipa x que consegue recuperar a bola e iniciar
-    um ataque oportuno.
+  text: Grande capacidade de reacao da Equipa [equipa] que consegue recuperar a bola
+    e iniciar um ataque oportuno.

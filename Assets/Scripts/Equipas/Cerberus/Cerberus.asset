@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
   m_Name: Cerberus
   m_EditorClassIdentifier: 
-  nome: 
+  nome: Cerberus
   logo: {fileID: 0}
   Jogadores:
   - {fileID: 11400000, guid: 8e87ddbbe3c71a248bc6a67c9f2817d4, type: 2}

@@ -15,7 +15,7 @@ public class RelogioScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tempoDecorrido = 15;
+        tempoDecorrido = 5;
     }
 
     // Update is called once per frame
@@ -39,26 +39,26 @@ public class RelogioScript : MonoBehaviour
         //Tempo In Game
         if (inGame == 1)
         {
-            
+
             tempoDecorrido = tempoDecorrido + Time.deltaTime;
             tempo.text = string.Format("{0:00}m:{1:00}s", minutos, segundos);
-            if( Mathf.RoundToInt(tempoDecorrido) % 20 == 0 && !eventoExecutado)
+            if (Mathf.RoundToInt(tempoDecorrido) % 60 == 0 && !eventoExecutado)
             {
-                Debug.Log("sao 5s");
                 EventRegistry.GetEventPublisher("TriggerEvent").RaiseEvent(this);
                 eventoExecutado = true;
                 StartCoroutine("WaitForASecond");
             }
 
-        
+
         }
     }
-    IEnumerator WaitForASecond(){
+    IEnumerator WaitForASecond()
+    {
         yield return new WaitForSeconds(1f);
         eventoExecutado = false;
         StopCoroutine("WaitForASecond");
 
-    } 
+    }
 
 
 

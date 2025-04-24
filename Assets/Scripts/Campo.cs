@@ -30,51 +30,54 @@ public class Campo : MonoBehaviour
 
     public void Start()
     {
-                    relacaoPosicaoJogador = new Dictionary<int, Jogador>();
+        relacaoPosicaoJogador = new Dictionary<int, Jogador>();
     }
     public void AddPlayerToZone(int posicao, Jogador jogador)
     {
         relacaoPosicaoJogador.Add(posicao, jogador);
-        Image playerImage = GameObject.Find($"/Canvas/Campo/Pos{posicao}/PosImage").GetComponent<Image>(); 
+        Image playerImage = GameObject.Find($"/Canvas/Campo/Pos{posicao}/PosImage").GetComponent<Image>();
         playerImage.sprite = jogador.Image;
         Debug.Log($"Pos> {posicao}, Jogador: {jogador.Nome}");
 
     }
 
-    public void SelecionarPosicao(int posicao){
+    public void SelecionarPosicao(int posicao)
+    {
         string borderPath = $"/Canvas/Campo/Pos{posicao}/PosBorder";
 
-        Debug.Log(borderPath);
-        GameObject playerBorder = GameObject.Find(borderPath); 
+        GameObject playerBorder = GameObject.Find(borderPath);
         playerBorder.SetActive(true);
     }
-    public void DeselecionarPosicao(int posicao){
-        GameObject playerBorder = GameObject.Find($"/Canvas/Campo/Pos{posicao}/PosBorder"); 
+    public void DeselecionarPosicao(int posicao)
+    {
+        GameObject playerBorder = GameObject.Find($"/Canvas/Campo/Pos{posicao}/PosBorder");
         playerBorder.SetActive(false);
     }
 
-    public Jogador GetJogador(int posicao){
+    public Jogador GetJogador(int posicao)
+    {
         return relacaoPosicaoJogador[posicao];
     }
 
-    public int GetJogadorPosicao(Jogador jogador){
+    public int GetJogadorPosicao(Jogador jogador)
+    {
         return relacaoPosicaoJogador.FirstOrDefault(posJogador => posJogador.Value == jogador).Key;
     }
 
     public void CalculaPercentagem()
     {
-        
-       Equipa1Def = relacaoPosicaoJogador[1].Def + relacaoPosicaoJogador[2].Def + relacaoPosicaoJogador[3].Def;
-       Equipa2Att = relacaoPosicaoJogador[4].Att + relacaoPosicaoJogador[5].Att + relacaoPosicaoJogador[6].Att;
+
+        Equipa1Def = relacaoPosicaoJogador[1].Def + relacaoPosicaoJogador[2].Def + relacaoPosicaoJogador[3].Def;
+        Equipa2Att = relacaoPosicaoJogador[4].Att + relacaoPosicaoJogador[5].Att + relacaoPosicaoJogador[6].Att;
 
         percentagem0 = Equipa1Def * 100 / (Equipa1Def + Equipa2Att);
         percentagem0Inv = 100 - percentagem0;
         percentagem0Text.text = percentagem0.ToString("#.") + " / " + percentagem0Inv.ToString("#.");
 
 
-        
-       Equipa1Mid = relacaoPosicaoJogador[1].Mid + relacaoPosicaoJogador[2].Mid + relacaoPosicaoJogador[3].Mid;
-       Equipa2Mid = relacaoPosicaoJogador[4].Mid + relacaoPosicaoJogador[5].Mid + relacaoPosicaoJogador[6].Mid;
+
+        Equipa1Mid = relacaoPosicaoJogador[1].Mid + relacaoPosicaoJogador[2].Mid + relacaoPosicaoJogador[3].Mid;
+        Equipa2Mid = relacaoPosicaoJogador[4].Mid + relacaoPosicaoJogador[5].Mid + relacaoPosicaoJogador[6].Mid;
 
         percentagem1 = Equipa1Mid * 100 / (Equipa1Mid + Equipa2Mid);
         percentagem1Inv = 100 - percentagem1;

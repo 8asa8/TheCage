@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
   m_Name: Tutto Bene
   m_EditorClassIdentifier: 
-  nome: 
+  nome: Tutto Bene
   logo: {fileID: 0}
   Jogadores:
   - {fileID: 11400000, guid: f07c35f55d6f92b49ad08362f4728781, type: 2}

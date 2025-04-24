@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   tipo: Equipa
-  text: Por sorte ou azar, a bola vai cair junto a um jogador da Equipa x que inicia
-    prontamente um contra-ataque.
+  text: Por sorte ou azar, a bola vai cair junto a um jogador da Equipa [equipa]
+    que inicia prontamente um contra-ataque.

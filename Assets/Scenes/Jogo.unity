@@ -1177,16 +1177,42 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c292b5dd7cf43104397f70aed3d0a343, type: 2}
   - {fileID: 11400000, guid: 663e3b750da2b3c4c8fb117415c8990c, type: 2}
   passaRollEquipa: 0
-  EventosEquipa: []
+  EventosEquipa:
+  - {fileID: 11400000, guid: da7c2d20e90210e4a96a20d1a318fa4d, type: 2}
+  - {fileID: 11400000, guid: 57643a74969ddb94893a058443caf324, type: 2}
+  - {fileID: 11400000, guid: a6440763f7b169047b759d557b315e12, type: 2}
+  - {fileID: 11400000, guid: 922fe5ba69cb1c049a4e588c1c2660d7, type: 2}
+  - {fileID: 11400000, guid: 4d1055890881fa74bbd0531a8f47e552, type: 2}
   passaRollDuelo: 0
-  EventosDuelo: []
-  EventosDueloPerdido: []
+  EventosDuelo:
+  - {fileID: 11400000, guid: 20375e72807c3ce43bdf7bf1a85ef981, type: 2}
+  - {fileID: 11400000, guid: eed0d5d1beb72af43b117c77088c30c1, type: 2}
+  - {fileID: 11400000, guid: c1a50bf13f7dcbe4fa767e79b78df642, type: 2}
+  - {fileID: 11400000, guid: 1181ac725e9d63240bf18434485f73fd, type: 2}
+  - {fileID: 11400000, guid: 43900b6de3eecde44b209d30c921e027, type: 2}
+  EventosDueloPerdido:
+  - {fileID: 11400000, guid: f825a89596814e14bb4e273013067fde, type: 2}
+  - {fileID: 11400000, guid: 81a932e0e2e51b84d90bf53d1c07724c, type: 2}
   passaRollEquipaReage: 0
-  EventosEquipaReage: []
-  EventosEquipaReagePerdido: []
+  EventosEquipaReage:
+  - {fileID: 11400000, guid: da122643639c40342acfc6c3bb7e1024, type: 2}
+  - {fileID: 11400000, guid: 181f6091de081e144ab572a82199f97e, type: 2}
+  - {fileID: 11400000, guid: 5bac9a8f71d21794eb03bf6e049ebf07, type: 2}
+  - {fileID: 11400000, guid: 7c15c3581c505744990b55b6717c1fee, type: 2}
+  - {fileID: 11400000, guid: b120eef1bdf8a9a4db90fbf245a3c8d9, type: 2}
+  EventosEquipaReagePerdido:
+  - {fileID: 11400000, guid: c50582e4f4fa9c14e934476243ecaca1, type: 2}
+  - {fileID: 11400000, guid: 73d7d56012d02c44c8d4b7cf131f4f8e, type: 2}
   passaRollDesfecho: 0
-  EventosDesfecho: []
-  EventosDesfechoPerdido: []
+  EventosDesfecho:
+  - {fileID: 11400000, guid: ee428998efc7bf84cb19c38830694012, type: 2}
+  - {fileID: 11400000, guid: 2cb6d91479e3043469b82bc5a7840078, type: 2}
+  - {fileID: 11400000, guid: 7aae92da018d3f54ebc865e947caad55, type: 2}
+  - {fileID: 11400000, guid: d16597bab0a3bcf43bdbb480a44fe3cf, type: 2}
+  - {fileID: 11400000, guid: 4b661e8e53c90d341917823572951b78, type: 2}
+  EventosDesfechoPerdido:
+  - {fileID: 11400000, guid: 6b10fa88215e24a4abfd54281bcd822b, type: 2}
+  - {fileID: 11400000, guid: 7a63eefb7adfdbc448a767602ac4af98, type: 2}
 --- !u!1 &695659840
 GameObject:
   m_ObjectHideFlags: 0

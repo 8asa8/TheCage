@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4608a6ddfec42be4b95a2644f0d93baf, type: 3}
-  m_Name: Evento Equipa5
+  m_Name: Evento Desfecho3
   m_EditorClassIdentifier: 
-  id: 5
-  tipo: Equipa
-  text: Numa disputa de ombro com ombro, o jogador da Equipa [equipa] ganha o controlo
-    da bola.
+  id: 3
+  tipo: Desfecho
+  text: '[activeplayer] passa a bola ao colega que levanta a bola ligeiramente no
+    ar... Os  [equipa2] antecipam o remate e cortam a linha de golo. Golo? GOLO!
+    [activeplayer] dispara um supersonico e furou a defesa dos [equipa2].'

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb9dac2314964843bc4d4311bb9b76b, type: 3}
   m_Name: Funk Seoul Brothers
   m_EditorClassIdentifier: 
-  nome: 
+  nome: Funk Seoul Brothers
   logo: {fileID: 0}
   Jogadores:
   - {fileID: 11400000, guid: 3551e3466df8b6e47a6d5a212585b812, type: 2}

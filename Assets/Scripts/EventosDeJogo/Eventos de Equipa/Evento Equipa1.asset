@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   tipo: Equipa
-  text: Um Jogador da Equipa x consegue reaver o esferico apos um posicionamento
+  text: Um Jogador da Equipa [equipa] consegue reaver o esferico apos um posicionamento
     incrivel.
