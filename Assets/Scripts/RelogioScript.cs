@@ -42,7 +42,7 @@ public class RelogioScript : MonoBehaviour
             
             tempoDecorrido = tempoDecorrido + Time.deltaTime;
             tempo.text = string.Format("{0:00}m:{1:00}s", minutos, segundos);
-            if( Mathf.RoundToInt(tempoDecorrido) % 5 == 0 && !eventoExecutado)
+            if( Mathf.RoundToInt(tempoDecorrido) % 20 == 0 && !eventoExecutado)
             {
                 Debug.Log("sao 5s");
                 EventRegistry.GetEventPublisher("TriggerEvent").RaiseEvent(this);

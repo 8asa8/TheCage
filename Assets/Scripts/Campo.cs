@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,15 +35,30 @@ public class Campo : MonoBehaviour
     public void AddPlayerToZone(int posicao, Jogador jogador)
     {
         relacaoPosicaoJogador.Add(posicao, jogador);
-
-        Image[] transformsOfChildren = GetComponentsInChildren<Image>();
-        transformsOfChildren[posicao].sprite = jogador.Image;
+        Image playerImage = GameObject.Find($"/Canvas/Campo/Pos{posicao}/PosImage").GetComponent<Image>(); 
+        playerImage.sprite = jogador.Image;
         Debug.Log($"Pos> {posicao}, Jogador: {jogador.Nome}");
 
     }
 
+    public void SelecionarPosicao(int posicao){
+        string borderPath = $"/Canvas/Campo/Pos{posicao}/PosBorder";
+
+        Debug.Log(borderPath);
+        GameObject playerBorder = GameObject.Find(borderPath); 
+        playerBorder.SetActive(true);
+    }
+    public void DeselecionarPosicao(int posicao){
+        GameObject playerBorder = GameObject.Find($"/Canvas/Campo/Pos{posicao}/PosBorder"); 
+        playerBorder.SetActive(false);
+    }
+
     public Jogador GetJogador(int posicao){
         return relacaoPosicaoJogador[posicao];
+    }
+
+    public int GetJogadorPosicao(Jogador jogador){
+        return relacaoPosicaoJogador.FirstOrDefault(posJogador => posJogador.Value == jogador).Key;
     }
 
     public void CalculaPercentagem()
