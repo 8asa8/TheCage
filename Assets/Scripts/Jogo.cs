@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using TMPro;
+using Unity.Burst.Intrinsics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -13,7 +17,8 @@ public class Jogo : MonoBehaviour
     public Campo campo;
     //public float percentagem0;
     //public TextMeshProUGUI percentagem0Text;
-
+    public TextMeshProUGUI scoreEquipa1;
+    public TextMeshProUGUI scoreEquipa2;
     public TMP_Text textObj;
     public TextMeshProUGUI cantonaText;
     private IEnumerator coroutine;
@@ -31,18 +36,19 @@ public class Jogo : MonoBehaviour
     public bool passaRollDesfecho;
     public List<EventosDeJogo> EventosDesfecho;
     public List<EventosDeJogo> EventosDesfechoPerdido;
+    Jogador ActivePlayer;
+    Jogador Opponent;
 
-    void Start()
+    public void Start()
     {
         RegisterEvents();
         SubscribeToEvents();
         equipa1 = GameState.equipa1;
         equipa2 = GameState.equipa2;
         //campo = new Campo(); 
-        Debug.Log(equipa1.nome);
         passaEvento = new Dictionary<int, bool>();
         int i = 1;
-        int j = 6;
+        int j = 4;
 
 
         foreach (Jogador jogador in equipa1.Jogadores)
@@ -58,7 +64,7 @@ public class Jogo : MonoBehaviour
         {
             Debug.Log($"Nome: {jogador.Nome}");
             campo.AddPlayerToZone(j, jogador);
-            j--;
+            j++;
 
         }
 
@@ -112,8 +118,8 @@ public class Jogo : MonoBehaviour
             //Equipa1
             passaRollEquipa = true;
             passaEvento[1] = passaRollEquipa;
-            Jogador ActivePlayer = campo.GetJogador(index1);
-            Jogador Opponent = campo.GetJogador(index2);
+            ActivePlayer = campo.GetJogador(index1);
+            Opponent = campo.GetJogador(index2);
             int posicao = campo.GetJogadorPosicao(ActivePlayer);
             campo.SelecionarPosicao(posicao);
 
@@ -166,8 +172,8 @@ public class Jogo : MonoBehaviour
             //Equipa2
             passaRollEquipa = true;
             passaEvento[1] = passaRollEquipa;
-            Jogador ActivePlayer = campo.GetJogador(index2);
-            Jogador Opponent = campo.GetJogador(index1);
+            ActivePlayer = campo.GetJogador(index2);
+            Opponent = campo.GetJogador(index1);
             int posicao = campo.GetJogadorPosicao(ActivePlayer);
             campo.SelecionarPosicao(posicao);
             campo.DifPvp = ActivePlayer.Especializacao(especializacao2) - Opponent.Especializacao(especializacao1);
@@ -190,7 +196,7 @@ public class Jogo : MonoBehaviour
                     Debug.Log("Os " + equipa2.nome + " apoiam o jogador com forca no ROLL DE EQUIPA REAGE: " + rollEquipaReage);
                     float rollDesfecho = Random.Range(1, 101);
 
-                    if (rollDesfecho < forcaEmbate)
+                    if (rollDesfecho < forcaEmbate + 0.05)
                     {
                         passaRollDesfecho = true;
                         passaEvento[4] = passaRollDesfecho;
@@ -231,7 +237,8 @@ public class Jogo : MonoBehaviour
 
         // EventosZona = new List<>
 
-        string evento = EventosZona.ElementAt(Random.Range(0, EventosZona.Count)).text;
+        string evento = AdicionarVariaveis(EventosZona.ElementAt(Random.Range(0, EventosZona.Count)).text);
+
         IEnumerator coroutine = UpdateText(evento);
         StartCoroutine(coroutine);
 
@@ -240,7 +247,7 @@ public class Jogo : MonoBehaviour
     }
     public void EventoEquipa()
     {
-        string evento = EventosEquipa.ElementAt(Random.Range(0, EventosEquipa.Count)).text;
+        string evento = AdicionarVariaveis(EventosEquipa.ElementAt(Random.Range(0, EventosEquipa.Count)).text);
         IEnumerator coroutine = UpdateText(evento);
         StartCoroutine(coroutine);
 
@@ -249,7 +256,7 @@ public class Jogo : MonoBehaviour
     }
     public void EventoDuelo()
     {
-        string evento = EventosDuelo.ElementAt(Random.Range(0, EventosDuelo.Count)).text;
+        string evento = AdicionarVariaveis(EventosDuelo.ElementAt(Random.Range(0, EventosDuelo.Count)).text);
         IEnumerator coroutine = UpdateText(evento);
         StartCoroutine(coroutine);
 
@@ -258,11 +265,16 @@ public class Jogo : MonoBehaviour
     }
     public void EventoDueloPerdido()
     {
-        Debug.Log("DUELO PERDIDOOOO");
+        string evento = AdicionarVariaveis(EventosDueloPerdido.ElementAt(Random.Range(0, EventosDueloPerdido.Count)).text);
+        IEnumerator coroutine = UpdateText(evento);
+        StartCoroutine(coroutine);
+
+        //IEnumerator enumerator = WaitForText(2);
+        //StartCoroutine(enumerator);
     }
     public void EventoEquipaReage()
     {
-        string evento = EventosEquipaReage.ElementAt(Random.Range(0, EventosEquipaReage.Count)).text;
+        string evento = AdicionarVariaveis(EventosEquipaReage.ElementAt(Random.Range(0, EventosEquipaReage.Count)).text);
         IEnumerator coroutine = UpdateText(evento);
         StartCoroutine(coroutine);
 
@@ -271,11 +283,17 @@ public class Jogo : MonoBehaviour
     }
     public void EventoEquipaReagePerdido()
     {
+        string evento = AdicionarVariaveis(EventosEquipaReagePerdido.ElementAt(Random.Range(0, EventosEquipaReagePerdido.Count)).text);
+        IEnumerator coroutine = UpdateText(evento);
+        StartCoroutine(coroutine);
+
+        //IEnumerator enumerator = WaitForText(3);
+        //StartCoroutine(enumerator);
         Debug.Log("EquipaReage PERDIDOOOO");
     }
     public void EventoDesfecho()
     {
-        string evento = EventosDesfecho.ElementAt(Random.Range(0, EventosDesfecho.Count)).text;
+        string evento = AdicionarVariaveis(EventosDesfecho.ElementAt(Random.Range(0, EventosDesfecho.Count)).text);
         IEnumerator coroutine = UpdateText(evento);
         StartCoroutine(coroutine);
 
@@ -284,19 +302,34 @@ public class Jogo : MonoBehaviour
     }
     public void EventoDesfechoPerdido()
     {
+        string evento = AdicionarVariaveis(EventosDesfechoPerdido.ElementAt(Random.Range(0, EventosDesfechoPerdido.Count)).text);
+        IEnumerator coroutine = UpdateText(evento);
+        StartCoroutine(coroutine);
         Debug.Log("DesfechoPerdido PERDIDOOOO");
     }
-
+    public void FimDoJogo()
+    {
+        if (equipa1.Jogadores.Contains(ActivePlayer))
+        {
+            Debug.Log("Fim do Jogo. Os " + equipa1.nome + " venceram a partida!");
+            scoreEquipa1.text = (int.Parse(scoreEquipa1.text) + 1).ToString();
+        }
+        else
+        {
+            Debug.Log("Fim do Jogo. Os " + equipa2.nome + " venceram a partida!");
+            scoreEquipa2.text = (int.Parse(scoreEquipa2.text) + 1).ToString();
+        }
+    }
     IEnumerator UpdateText(string text) //Para as caixas de texto
     {
         cantonaText.text = text;
         textObj.text = cantonaText.text;
         Debug.Log("------------------" + textObj.text);
         textObj.maxVisibleCharacters = 0;
-        while (textObj.maxVisibleCharacters < 164)
+        while (textObj.maxVisibleCharacters < textObj.text.Length)
         {
             textObj.maxVisibleCharacters += 1;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
         StopCoroutine("UpdateText");
     }
@@ -320,7 +353,8 @@ public class Jogo : MonoBehaviour
                     EventoDesfecho();
                     break;
                 case 4:
-                    Debug.Log("GOLO");
+                    FimDoJogo();
+
                     break;
             }
         }
@@ -343,6 +377,39 @@ public class Jogo : MonoBehaviour
 
     }
 
+    public string AdicionarVariaveis(string texto)
+    {
+        string zona = "";
+
+        switch (campo.campoZona)
+        {
+            case 1:
+                zona = "de defesa";
+                break;
+            case 2:
+                zona = "de meio campo";
+                break;
+            case 3:
+                zona = "de ataque";
+                break;
+            default:
+                zona = "";
+                break;
+        }
+        Dictionary<string, string> replacements = new Dictionary<string, string>();
+        replacements.Add("[zona]", zona);
+        replacements.Add("[activeplayer]", ActivePlayer.Nome);
+        replacements.Add("[equipa]", equipa1.nome);
+        replacements.Add("[equipa2]", equipa2.nome);
+        replacements.Add("[opponent]", Opponent.Nome);
+
+        // Loop through each key-value pair in the dictionary and replace in the input string
+        foreach (var replacement in replacements)
+        {
+            texto = texto.Replace(replacement.Key, replacement.Value);
+        }
+        return texto;
+    }
     private void RegisterEvents()
     {
         EventRegistry.RegisterEvent("TriggerEvent");
